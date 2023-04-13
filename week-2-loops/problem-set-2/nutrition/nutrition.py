@@ -26,7 +26,7 @@ fruits = {
 item = input("Item: ").lower()
 
 try:
-    # Retrieve the calorie count for the given fruit name(item) using the get() method
+    # Retrieve the calorie count(value) for the given fruit name(key/item) using the get() method
     calories = fruits.get(item)
 
     # Check if calories is not None (i.e., the key was found in the dictionary)
@@ -39,3 +39,9 @@ try:
 except KeyError:
     # Handle any other exceptions that may occur
     print("An error occurred while retrieving the calorie count.")
+
+
+# I used the fruits.get(item) method instead of:
+# for f in fruits:
+#     if f == user_input:
+#         print("Calories:", fruits[f])
