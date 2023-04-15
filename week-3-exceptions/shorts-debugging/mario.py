@@ -6,6 +6,8 @@ def main():
 
 def pyramid(n):
     for i in range(n):
+        # range() function returns a list of integers from some lower bound (zero, by default) up to (but not including) some upper bound (n)
+        # We added +1 to i so that it starts from 1 and prints one # in the first line of output
         print("#" * (i + 1))
 
 
