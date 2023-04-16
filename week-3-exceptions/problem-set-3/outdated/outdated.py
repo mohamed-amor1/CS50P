@@ -45,20 +45,22 @@ while True:
             month, day, year = user_input.split()
             # Convert the day to an integer
             day = int(day)
-
-            # Iterate over the list of month names and their corresponding index
-            for i, month_name in enumerate(MONTHS):
-                # Check if the month name matches the current month name in the iteration
-                if month == month_name:
-                    # Convert the month name to its corresponding number (1-12)
-                    month = i + 1
-                    # Format the date as yyyy-mm-dd and print it to the console
-                    print(format_date(year, month, day))
-                    # Exit the loop since a valid date was entered
-                    break
+            if 1 <= day <= 31:
+                # Iterate over the list of month names and their corresponding index
+                for i, month_name in enumerate(MONTHS):
+                    # Check if the month name matches the current month name in the iteration
+                    if month == month_name:
+                        # Convert the month name to its corresponding number (1-12)
+                        month = i + 1
+                        # Format the date as yyyy-mm-dd and print it to the console
+                        print(format_date(year, month, day))
+                        # Exit the loop since a valid date was entered
+                        break
+                    else:
+                        # Raise a ValueError if the month name is invalid
+                        raise ValueError("Invalid month name")
             else:
-                # Raise a ValueError if the month name is invalid
-                raise ValueError("Invalid month name")
+                raise ValueError("Invalid day")
 
         # Raise a ValueError if the date format is invalid
         else:
