@@ -9,4 +9,3 @@ coin = choice(options)
 
 # Print the randomly selected option
 print(coin)
-
