@@ -1,0 +1,38 @@
+Importing the re Module:
+In order to use regular expressions in Python, you'll need to import the re module:
+
+import re
+
+
+Creating Regular Expressions:
+To create a regular expression, you can use a combination of special characters and symbols that define the pattern you're looking for. Here are some of the most common ones:
+
+. matches any single character (except for a newline)
+* matches zero or more occurrences of the preceding character or group
++ matches one or more occurrences of the preceding character or group
+? matches zero or one occurrences of the preceding character or group
+{n} matches exactly n occurrences of the preceding character or group
+{n,} matches n or more occurrences of the preceding character or group
+{n,m} matches between n and m occurrences of the preceding character or group
+[] matches any single character within the brackets
+| matches either the expression before or after the pipe
+() creates a group, which can be used for repetition or extracting matched text
+
+
+Using Regular Expressions:
+Once you've created a regular expression, you can use it with various functions in the re module to search for matches in strings, replace matches, or split strings based on matches. Here are some of the most common functions:
+
+re.search(pattern, string, flags=0) searches for the first occurrence of pattern in string and returns a match object if found, or None if not found
+re.match(pattern, string, flags=0) searches for pattern at the beginning of string and returns a match object if found, or None if not found
+re.findall(pattern, string, flags=0) searches for all non-overlapping occurrences of pattern in string and returns a list of matches
+re.sub(pattern, repl, string, count=0, flags=0) replaces all occurrences of pattern in string with repl and returns the modified string
+re.split(pattern, string, maxsplit=0, flags=0) splits string into a list of substrings based on pattern
+
+
+Flags:
+You can include optional flags when using regular expressions in Python to modify how the regular expression behaves. Here are some of the most common flags:
+
+re.IGNORECASE or re.I makes the pattern case-insensitive
+re.MULTILINE or re.M allows ^ and $ to match the beginning and end of lines within a multi-line string
+re.DOTALL or re.S allows . to match any character, including a newline
+re.VERBOSE or re.X allows you to include comments and whitespace within the regular expression to make it more readable
